@@ -11,16 +11,9 @@ import Cart from './Cart/Cart';
 
 // Styles
 import { Wrapper, StyledButton } from './App.styles';
+import { CartItemType } from './Types/Types';
 
-export type CartItemType = {
-  id: number;
-  category: string;
-  image: string;
-  price: number;
-  title: string;
-  amount: number;
-  description: string;
-}
+
 
 const getProducts = async (): Promise<CartItemType[]> => 
   await (await fetch('https://fakestoreapi.com/products/')).json();
